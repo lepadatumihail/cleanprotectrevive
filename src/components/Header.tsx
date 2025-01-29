@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { usePathname, useRouter } from 'next/navigation'
+import LogoSvg from '@/images/logo.svg'
+import { InstagramLogo, FacebookLogo } from '@phosphor-icons/react'
 
 const navigation = [
   { name: 'About', href: '#about' },
@@ -18,6 +20,7 @@ import { Container } from '@/components/Container'
 import { DiamondIcon } from '@/components/DiamondIcon'
 import { Logo } from '@/components/Logo'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -50,11 +53,7 @@ export function Header() {
         <div className="flex lg:flex-1">
           <Link href="/">
             <span className="sr-only">Your Company</span>
-            <img
-              alt="f"
-              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
-            />
+            <Image src={LogoSvg} alt="Logo" width={100} height={100} />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -79,12 +78,24 @@ export function Header() {
             </button>
           ))}
         </div>
-        <Link
-          href={isHomePage ? '/blog' : '/'}
-          className="hidden text-sm font-semibold lg:flex lg:flex-1 lg:justify-end"
-        >
-          {isHomePage ? 'Blog' : 'Home'} <span aria-hidden="true"> &rarr;</span>
-        </Link>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6">
+          <Link
+            href="https://www.instagram.com/cleanprotectrevive/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-blue-900"
+          >
+            <InstagramLogo size={26} weight="fill" />
+          </Link>
+          <Link
+            href="https://www.facebook.com/profile.php?id=61567080843249"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-blue-900"
+          >
+            <FacebookLogo size={26} weight="fill" />
+          </Link>
+        </div>
       </nav>
       <Dialog
         open={mobileMenuOpen}
@@ -130,13 +141,24 @@ export function Header() {
                 ))}
               </div>
               <div className="py-6">
-                <Link
-                  href={isHomePage ? '/blog' : '/'}
-                  className="text-sm font-semibold lg:flex lg:flex-1 lg:justify-end"
-                >
-                  {isHomePage ? 'Blog' : 'Home'}{' '}
-                  <span aria-hidden="true"> &rarr;</span>
-                </Link>
+                <div className="flex gap-x-6">
+                  <Link
+                    href="https://www.instagram.com/cleanprotectrevive/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 hover:text-gray-900"
+                  >
+                    <InstagramLogo size={24} weight="fill" />
+                  </Link>
+                  <Link
+                    href="https://www.facebook.com/profile.php?id=61567080843249"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-700 hover:text-gray-900"
+                  >
+                    <FacebookLogo size={24} weight="fill" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

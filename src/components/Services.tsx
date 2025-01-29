@@ -4,48 +4,43 @@ import { useId } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
 
-import Service1 from '@/images/services/services1.webp'
-import Service2 from '@/images/services/services2.webp'
-import Service3 from '@/images/services/services3.webp'
-import Service4 from '@/images/services/services4.webp'
-import Service5 from '@/images/services/services5.webp'
-import Service6 from '@/images/services/services6.webp'
-import Service7 from '@/images/services/services7.webp'
-import Service8 from '@/images/services/services8.webp'
+import Service1 from '@/images/dropbox/1.jpg'
+import Service2 from '@/images/dropbox/8.jpg'
+import Service3 from '@/images/dropbox/3.jpg'
+import Service4 from '@/images/dropbox/11.jpg'
+import Service5 from '@/images/dropbox/5.jpg'
 import { Container } from './Container'
 
 const services = [
   {
-    name: 'Residential Cleaning',
-    description: 'Comprehensive cleaning for homes and apartments',
+    name: 'Jet Washing',
+    description:
+      "At Clean Protect Revive, we know Manchester's weather takes its toll on outdoor surfaces. That's why our jet washing service is designed to remove stubborn dirt, grime, and oil stains, leaving your driveway, patio, or walls looking as good as new.",
     image: Service1,
   },
   {
-    name: 'ECO-Friendly Commercial Cleaning',
+    name: 'Roof Cleaning',
     description:
-      'Environmentally consciousa and professional cleaning services for businesses',
+      "Manchester's weather can lead to moss and algae buildup on your roof. Our roof cleaning service not only improves the appearance of your property but also protects your roof from long-term damage.",
     image: Service2,
   },
   {
-    name: 'Deep Cleaning',
-    description: 'Thorough cleaning for neglected or heavily soiled areas',
+    name: 'Gutter Cleaning & Maintenance',
+    description:
+      "Clogged gutters in Manchester? We're here to help. Clean Protect Revive will clear out leaves and debris, ensuring your gutters work perfectly, even in the rainiest months.",
     image: Service3,
   },
   {
-    name: 'Window Cleaning',
-    description: 'Crystal clear windows for homes and offices',
+    name: 'Solar Panel Cleaning',
+    description:
+      'Maximize your energy savings in Manchester with professionally cleaned solar panels. Clean Protect Revive ensures your panels are spotless and operating at peak efficiency.',
     image: Service4,
   },
   {
-    name: 'Carpet Cleaning',
-    description: 'Deep carpet cleaning and stain removal',
+    name: 'Deck Cleaning',
+    description:
+      "From BBQ-ready decks in Didsbury to quiet garden spaces in Salford, we'll clean and revive your decking to its natural beauty, no matter where you are in Manchester.",
     image: Service5,
-  },
-
-  {
-    name: 'Construction and Movings  Cleaning',
-    description: 'Thorough cleaning for property transitions',
-    image: Service7,
   },
 ]
 
@@ -63,28 +58,25 @@ export const Services = () => {
             Our Services
           </h2>
           <p className="text-md mt-4 font-display leading-7 text-gray-600 sm:text-lg">
-            Explore our comprehensive range of professional cleaning services
-            designed to meet all your needs. From residential to commercial
-            spaces, we offer eco-friendly solutions that ensure a spotless,
-            healthy environment. Our team of experienced professionals is
-            committed to delivering exceptional results, using state-of-the-art
-            equipment and environmentally conscious products.
+            From driveways to roofs, we handle it all. Our specialized cleaning
+            and maintenance solutions tackle Manchester&apos;s toughest weather
+            effects to keep your property looking its best—no matter the season.
           </p>
         </div>
         <div className="mt-14 grid grid-cols-1 gap-14 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, serviceIndex) => (
             <div key={service.name} className="relative">
-              <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
+              <div className="group relative h-[17.5rem] transform overflow-hidden rounded-xl">
                 <div
                   className={clsx(
                     'absolute bottom-6 left-0 right-4 top-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
-                    ['border-gray-300', 'border-green-300', 'border-sky-300'][
+                    ['border-gray-300', 'border-blue-300', 'border-sky-300'][
                       serviceIndex % 3
                     ],
                   )}
                 />
                 <div
-                  className="absolute inset-0 bg-green-50"
+                  className="absolute inset-0 bg-blue-50"
                   style={{ clipPath: `url(#${id}-${serviceIndex % 3})` }}
                 >
                   <Image

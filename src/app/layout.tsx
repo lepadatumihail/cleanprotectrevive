@@ -18,40 +18,40 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://biodika.vercel.app'),
+  metadataBase: new URL('https://www.cleanprotectrevive.com/'),
   title: {
-    template: '%s | Bio-Dika Nettoyage',
-    default: 'Bio-Dika Nettoyage - Eco-Friendly Cleaning Services',
+    template: '%s | Clean Protect Revive',
+    default: 'Clean Protect Revive - Cleaning Services Manchester',
   },
   description:
-    'Bio-Dika Nettoyage offers professional eco-friendly cleaning services for homes and businesses. Our green cleaning solutions are safe for people, pets, and the environment.',
+    'From driveways to roofs in Manchester, we’ll leave your property spotless and refreshed. Ready to transform your space? Let’s get started today!',
   keywords: [
     'eco-friendly cleaning',
     'green cleaning',
     'professional cleaning services',
-    'Bio-Dika Nettoyage',
+    'Clean Protect Revive',
   ],
   authors: [
-    { name: 'Bio-Dika Nettoyage', url: 'https://biodika-nettoyage.com' },
+    { name: 'Clean Protect Revive', url: 'https://www.cleanprotectrevive.com' },
   ],
   openGraph: {
-    title: 'Bio-Dika Nettoyage - Eco-Friendly Cleaning Services',
+    title: 'Clean Protect Revive - Eco-Friendly Cleaning Services',
     description:
       'Professional eco-friendly cleaning services for homes and businesses.',
     type: 'website',
-    url: 'https://www.biodikanettoyage.com',
+    url: 'https://www.cleanprotectrevive.com',
     images: [
       {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Bio-Dika Nettoyage',
+        alt: 'Clean Protect Revive',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bio-Dika Nettoyage - Eco-Friendly Cleaning Services',
+    title: 'Clean Protect Revive - Eco-Friendly Cleaning Services',
     description:
       'Professional eco-friendly cleaning services for homes and businesses.',
     images: ['/images/og-image.png'],

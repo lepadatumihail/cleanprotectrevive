@@ -172,7 +172,7 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
           aria-label={`${timeSlot.name} for ${timeSlot.description} at ${timeSlot.start} - ${timeSlot.end}`}
         >
           {timeSlotIndex > 0 && (
-            <div className="mx-auto mb-8 h-px w-48 bg-green-500/10" />
+            <div className="mx-auto mb-8 h-px w-48 bg-blue-500/10" />
           )}
           <h4 className="text-lg font-semibold tracking-tight text-gray-900">
             {timeSlot.name}
