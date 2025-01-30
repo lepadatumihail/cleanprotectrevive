@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { DM_Sans, Inter } from 'next/font/google'
 import clsx from 'clsx'
+import { Analytics } from '@vercel/analytics/react'
 
 import '@/styles/tailwind.css'
 
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     default: 'Clean Protect Revive - Cleaning Services Manchester',
   },
   description:
-    'From driveways to roofs in Manchester, we’ll leave your property spotless and refreshed. Ready to transform your space? Let’s get started today!',
+    'From driveways to roofs in Manchester, we will leave your property spotless and refreshed. Ready to transform your space? Let us get started today!',
   keywords: [
     'eco-friendly cleaning',
     'green cleaning',
@@ -74,7 +75,10 @@ export default function RootLayout({
       )}
     >
       <body className="flex min-h-full">
-        <div className="flex w-full flex-col">{children}</div>
+        <div className="flex w-full flex-col">
+          {children}
+          <Analytics />
+        </div>
       </body>
     </html>
   )
