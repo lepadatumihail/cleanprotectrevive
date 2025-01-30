@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     { name: 'Clean Protect Revive', url: 'https://www.cleanprotectrevive.com' },
   ],
   openGraph: {
-    title: 'Clean Protect Revive - Eco-Friendly Cleaning Services',
+    title: 'Clean Protect Revive - Cleaning Services Manchester',
     description:
-      'Professional eco-friendly cleaning services for homes and businesses.',
+      'From driveways to roofs in Manchester, we will leave your property spotless and refreshed. Ready to transform your space? Let us get started today!',
     type: 'website',
     url: 'https://www.cleanprotectrevive.com',
     images: [
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Clean Protect Revive - Eco-Friendly Cleaning Services',
+    title: 'Clean Protect Revive - Cleaning Services Manchester',
     description:
-      'Professional eco-friendly cleaning services for homes and businesses.',
+      'From driveways to roofs in Manchester, we will leave your property spotless and refreshed. Ready to transform your space? Let us get started today!',
     images: ['/images/og-image.png'],
   },
   robots: 'index, follow',
