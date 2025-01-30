@@ -10,12 +10,14 @@ import { Services } from '@/components/Services'
 import { Sponsors } from '@/components/Sponsors'
 import Image from 'next/image'
 import Whatsapp from '@/images/whatsapp.svg'
+import { InstagramFeed } from '@/components/InstagramFeed'
 
 export default function Home() {
   return (
     <>
       <HeroTW />
       <About />
+      <InstagramFeed />
       {/* <Features /> */}
       {/* <Hero /> */}
       <CTA />
