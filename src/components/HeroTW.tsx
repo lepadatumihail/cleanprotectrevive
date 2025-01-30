@@ -74,7 +74,7 @@ export const HeroTW = () => {
                   transition={{ duration: 0.8 }}
                   className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl"
                 >
-                  <h1 className="font-display text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                  <h1 className="bg-gradient-to-br from-gray-900 via-blue-900 to-emerald-500 bg-clip-text font-display text-4xl font-bold tracking-tight text-transparent sm:text-6xl">
                     Welcome to Clean Protect Revive Manchester
                   </h1>
 
