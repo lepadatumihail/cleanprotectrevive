@@ -12,7 +12,7 @@ export const InstagramFeed = () => {
 
   const posts = [
     'https://www.instagram.com/reel/DFSYH_Ft5i-/',
-    'https://www.instagram.com/reel/DFPTIP5Nz5t/', 
+    'https://www.instagram.com/reel/DFPTIP5Nz5t/',
     'https://www.instagram.com/reel/DE5gTTrtmfE/',
     'https://www.instagram.com/p/DDXefJbtm8z/',
     'https://www.instagram.com/p/DCg_-_AtSQO/',
@@ -21,8 +21,10 @@ export const InstagramFeed = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) setGroupSize(1) // Mobile
-      else if (window.innerWidth < 1024) setGroupSize(2) // Tablet
+      if (window.innerWidth < 640)
+        setGroupSize(1) // Mobile
+      else if (window.innerWidth < 1024)
+        setGroupSize(2) // Tablet
       else setGroupSize(3) // Desktop
     }
 
@@ -53,13 +55,13 @@ export const InstagramFeed = () => {
             Check out our recent transformations and projects across Manchester
           </p>
         </div>
-        <div className="mt-8 sm:mt-16 relative px-4">
+        <div className="relative mt-8 px-4 sm:mt-16">
           <Carousel
             showArrows={true}
             showStatus={false}
             showThumbs={false}
             infiniteLoop={true}
-            autoPlay={true}
+            autoPlay={false}
             interval={5000}
             stopOnHover={true}
             className="instagram-carousel"
@@ -68,7 +70,7 @@ export const InstagramFeed = () => {
                 <button
                   type="button"
                   onClick={clickHandler}
-                  className="absolute left-0 top-1/2 z-50 -translate-y-1/2 rounded-xl bg-black/40 p-2 sm:p-3 text-white hover:bg-black/50"
+                  className="absolute left-0 top-1/2 z-50 -translate-y-1/2 rounded-xl bg-black/40 p-2 text-white hover:bg-black/50 sm:p-3"
                   style={{ left: 5 }}
                 >
                   &#8592;
@@ -80,7 +82,7 @@ export const InstagramFeed = () => {
                 <button
                   type="button"
                   onClick={clickHandler}
-                  className="absolute right-0 top-1/2 z-50 -translate-y-1/2 rounded-xl bg-black/40 p-2 sm:p-3 text-white hover:bg-black/50"
+                  className="absolute right-0 top-1/2 z-50 -translate-y-1/2 rounded-xl bg-black/40 p-2 text-white hover:bg-black/50 sm:p-3"
                   style={{ right: 5 }}
                 >
                   &#8594;
@@ -89,10 +91,13 @@ export const InstagramFeed = () => {
             }}
           >
             {groupPosts(posts, groupSize).map((group) => (
-              <div key={group[0]} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+              <div
+                key={group[0]}
+                className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3"
+              >
                 {group.map((url) => (
                   <div key={url} className="flex justify-center">
-                    <InstagramEmbed 
+                    <InstagramEmbed
                       url={url}
                       width={Math.min(328, window.innerWidth - 40)}
                     />
