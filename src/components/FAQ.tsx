@@ -10,19 +10,19 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const faqs = [
   {
-    question: 'Which areas in Manchester do you cover?',
+    question: 'Which areas in Northwest do you cover?',
     answer:
-      'We cover all areas in and around Manchester, including Salford, Altrincham, Didsbury, and Stockport. Not sure if we can reach you? Just give us a call!',
+      'We cover all areas in and around Northwest, including Salford, Altrincham, Didsbury, and Stockport. Not sure if we can reach you? Just give us a call!',
   },
   {
-    question: "How do you handle Manchester's rainy weather during a clean?",
+    question: "How do you handle Northwest's rainy weather during a clean?",
     answer:
       "Rain doesn't stop us! We'll adjust our schedule as needed to ensure you get the best results.",
   },
   {
     question: 'Can I book multiple services at once?',
     answer:
-      'Absolutely! Many of our Manchester customers book a roof and driveway clean together. Ask us about bundle discounts!',
+      'Absolutely! Many of our Northwest customers book a roof and driveway clean together. Ask us about bundle discounts!',
   },
 ]
 

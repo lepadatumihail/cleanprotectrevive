@@ -22,10 +22,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.cleanprotectrevive.com/'),
   title: {
     template: '%s | Clean Protect Revive',
-    default: 'Clean Protect Revive - Cleaning Services Manchester',
+    default: 'Clean Protect Revive - Cleaning Services Northwest',
   },
   description:
-    'From driveways to roofs in Manchester, we will leave your property spotless and refreshed. Ready to transform your space? Let us get started today!',
+    'From driveways to roofs in Northwest, we will leave your property spotless and refreshed. Ready to transform your space? Let us get started today!',
   keywords: [
     'eco-friendly cleaning',
     'green cleaning',
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     { name: 'Clean Protect Revive', url: 'https://www.cleanprotectrevive.com' },
   ],
   openGraph: {
-    title: 'Clean Protect Revive - Cleaning Services Manchester',
+    title: 'Clean Protect Revive - Cleaning Services Northwest',
     description:
-      'From driveways to roofs in Manchester, we will leave your property spotless and refreshed. Ready to transform your space? Let us get started today!',
+      'From driveways to roofs in Northwest, we will leave your property spotless and refreshed. Ready to transform your space? Let us get started today!',
     type: 'website',
     url: 'https://www.cleanprotectrevive.com',
     images: [
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Clean Protect Revive - Cleaning Services Manchester',
+    title: 'Clean Protect Revive - Cleaning Services Northwest',
     description:
-      'From driveways to roofs in Manchester, we will leave your property spotless and refreshed. Ready to transform your space? Let us get started today!',
+      'From driveways to roofs in Northwest, we will leave your property spotless and refreshed. Ready to transform your space? Let us get started today!',
     images: ['/images/og-image.png'],
   },
   robots: 'index, follow',

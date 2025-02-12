@@ -18,7 +18,7 @@ export function Carousel() {
           View Our Previous Work
         </h2>
         <p className="text-md mt-4 text-center font-display leading-7 text-gray-600 sm:text-lg">
-          Take a look at some examples of our work across Manchester. These
+          Take a look at some examples of our work across Northwest. These
           projects showcase our commitment to quality and attention to detail.
         </p>
 

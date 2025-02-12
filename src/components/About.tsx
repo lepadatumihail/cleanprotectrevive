@@ -31,7 +31,7 @@ export const About = () => {
                     Protect Revive, we believe that a well-maintained exterior
                     not only boosts curb appeal but also preserves the value of
                     your property—ensuring it’s ready to shine in the heart of
-                    Manchester’s ever-changing climate.
+                    Northwest’s ever-changing climate.
                   </p>
 
                   <div className="mt-10 flex items-center gap-x-6">
@@ -39,7 +39,7 @@ export const About = () => {
                       href="/register"
                       className="text-sm font-semibold leading-6 text-blue-600"
                     >
-                      Book a Service in Manchester Now{' '}
+                      Book a Service in Northwest Now{' '}
                       <span aria-hidden="true">→</span>
                     </a>
                   </div>

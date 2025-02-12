@@ -27,7 +27,7 @@ export const InstagramFeed = () => {
             Latest Work
           </h2>
           <p className="text-md mt-4 font-display leading-7 text-gray-600 sm:text-lg">
-            Check out our recent transformations and projects across Manchester
+            Check out our recent transformations and projects across Northwest
           </p>
         </div>
         <div className="relative mt-8 px-4 sm:mt-16">

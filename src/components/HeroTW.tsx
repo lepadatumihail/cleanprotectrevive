@@ -8,9 +8,11 @@ import Hero2 from '@/images/dropbox/10.jpg'
 import Hero3 from '@/images/dropbox/12.jpg'
 import Hero4 from '@/images/dropbox/11.jpg'
 import Hero5 from '@/images/dropbox/9.jpg'
+import { QuoteModal } from './QuoteModal'
 
 export const HeroTW = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
 
   return (
     <div className="min-h-fit bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50 py-10 sm:h-screen sm:py-0">
@@ -75,24 +77,25 @@ export const HeroTW = () => {
                   className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl"
                 >
                   <h1 className="bg-gradient-to-br from-gray-900 via-blue-900 to-emerald-500 bg-clip-text font-display text-4xl font-bold tracking-tight text-transparent sm:text-6xl">
-                    Welcome to Clean Protect Revive Manchester
+                    Welcome to Clean Protect Revive Northwest
                   </h1>
 
                   <p className="mt-6 font-display text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    Manchester’s trusted experts in cleaning, protecting, and
-                    reviving your home’s surfaces. From driveways to roofs,
-                    we’ll leave your property spotless and refreshed. Ready to
-                    transform your space? Let’s get started today!
+                    Northwest&apos;s trusted experts in cleaning, protecting,
+                    and reviving your home&apos;s surfaces. From driveways to
+                    roofs, we&apos;ll leave your property spotless and
+                    refreshed. Ready to transform your space? Let&apos;s get
+                    started today!
                   </p>
                   <div className="mt-10 flex items-center gap-x-6">
-                    <motion.a
+                    <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      href="#schedule"
-                      className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                      onClick={() => setIsQuoteModalOpen(true)}
+                      className="cursor-pointer rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                     >
                       Get Your Free Quote <span aria-hidden="true">→</span>
-                    </motion.a>
+                    </motion.button>
                   </div>
                 </motion.div>
                 <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -183,6 +186,7 @@ export const HeroTW = () => {
           </div>
         </div>
       </main>
+      <QuoteModal isOpen={isQuoteModalOpen} setIsOpen={setIsQuoteModalOpen} />
     </div>
   )
 }

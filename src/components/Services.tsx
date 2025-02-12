@@ -9,37 +9,38 @@ import Service2 from '@/images/dropbox/8.jpg'
 import Service3 from '@/images/dropbox/3.jpg'
 import Service4 from '@/images/dropbox/11.jpg'
 import Service5 from '@/images/dropbox/5.jpg'
+import Service6 from '@/images/dropbox/roofcleaning.webp'
 import { Container } from './Container'
 
 const services = [
   {
     name: 'Jet Washing',
     description:
-      "At Clean Protect Revive, we know Manchester's weather takes its toll on outdoor surfaces. That's why our jet washing service is designed to remove stubborn dirt, grime, and oil stains, leaving your driveway, patio, or walls looking as good as new.",
+      "At Clean Protect Revive, we know Northwest's weather takes its toll on outdoor surfaces. That's why our jet washing service is designed to remove stubborn dirt, grime, and oil stains, leaving your driveway, patio, or walls looking as good as new.",
     image: Service1,
   },
   {
     name: 'Roof Cleaning',
     description:
-      "Manchester's weather can lead to moss and algae buildup on your roof. Our roof cleaning service not only improves the appearance of your property but also protects your roof from long-term damage.",
-    image: Service2,
+      "Northwest's weather can lead to moss and algae buildup on your roof. Our roof cleaning service not only improves the appearance of your property but also protects your roof from long-term damage.",
+    image: Service6,
   },
   {
     name: 'Gutter Cleaning & Maintenance',
     description:
-      "Clogged gutters in Manchester? We're here to help. Clean Protect Revive will clear out leaves and debris, ensuring your gutters work perfectly, even in the rainiest months.",
-    image: Service3,
+      "Clogged gutters in Northwest? We're here to help. Clean Protect Revive will clear out leaves and debris, ensuring your gutters work perfectly, even in the rainiest months.",
+    image: Service2,
   },
   {
     name: 'Solar Panel Cleaning',
     description:
-      'Maximize your energy savings in Manchester with professionally cleaned solar panels. Clean Protect Revive ensures your panels are spotless and operating at peak efficiency.',
+      'Maximize your energy savings in Northwest with professionally cleaned solar panels. Clean Protect Revive ensures your panels are spotless and operating at peak efficiency.',
     image: Service4,
   },
   {
     name: 'Deck Cleaning',
     description:
-      "From BBQ-ready decks in Didsbury to quiet garden spaces in Salford, we'll clean and revive your decking to its natural beauty, no matter where you are in Manchester.",
+      "From BBQ-ready decks in Didsbury to quiet garden spaces in Salford, we'll clean and revive your decking to its natural beauty, no matter where you are in Northwest.",
     image: Service5,
   },
 ]
@@ -59,7 +60,7 @@ export const Services = () => {
           </h2>
           <p className="text-md mt-4 font-display leading-7 text-gray-600 sm:text-lg">
             From driveways to roofs, we handle it all. Our specialized cleaning
-            and maintenance solutions tackle Manchester&apos;s toughest weather
+            and maintenance solutions tackle Northwest&apos;s toughest weather
             effects to keep your property looking its best—no matter the season.
           </p>
         </div>
