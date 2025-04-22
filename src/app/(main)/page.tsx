@@ -37,7 +37,7 @@ export default function Home() {
           alt="Whatsapp"
           width={50}
           height={50}
-          className="fixed bottom-10 right-10 hover:scale-110 transition-transform"
+          className="fixed bottom-10 right-10 transition-transform hover:scale-110"
         />
       </a>
       {/* <Newsletter /> */}

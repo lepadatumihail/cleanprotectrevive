@@ -19,11 +19,22 @@ interface GoogleAPIError {
   message?: string
 }
 
+// Properly format the private key
+const formatPrivateKey = (key: string | undefined): string | undefined => {
+  if (!key) return undefined
+  // If the key doesn't start with -----BEGIN PRIVATE KEY-----, it may need fixing
+  if (!key.includes('-----BEGIN PRIVATE KEY-----')) {
+    // Try to fix the key by properly formatting each line
+    return key.replace(/\\n/g, '\n')
+  }
+  return key
+}
+
 // Initialize Google Sheets API
 const auth = new google.auth.GoogleAuth({
   credentials: {
     client_email: process.env.GOOGLE_CLIENT_EMAIL,
-    private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+    private_key: formatPrivateKey(process.env.GOOGLE_PRIVATE_KEY),
   },
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 })
@@ -40,6 +51,16 @@ export async function POST(request: Request) {
       throw new Error('GOOGLE_SHEET_ID is not configured')
     }
 
+    // Debug the private key format
+    if (!process.env.GOOGLE_PRIVATE_KEY) {
+      throw new Error('GOOGLE_PRIVATE_KEY is not configured')
+    }
+
+    // Validate the credentials
+    if (!process.env.GOOGLE_CLIENT_EMAIL) {
+      throw new Error('GOOGLE_CLIENT_EMAIL is not configured')
+    }
+
     // Prepare the values to be inserted - match exact spreadsheet column order:
     // Name | Email | Number | Answer | Quoted | Agreed | Notes
     const values = [
@@ -47,10 +68,10 @@ export async function POST(request: Request) {
         name, // Column A: Name
         email, // Column B: Email
         number, // Column C: Number
-        'wp', // Column D: Answer (default 'wp')
+        '', // Column D: Answer (default 'wp')
         '', // Column E: Quoted (empty)
         '', // Column F: Agreed (empty)
-        notes, // Column G: Notes
+        `website: ${notes}`, // Column G: Notes
       ],
     ]
 
@@ -83,7 +104,7 @@ export async function POST(request: Request) {
       // Append the data to the sheet
       await sheets.spreadsheets.values.append({
         spreadsheetId: SPREADSHEET_ID,
-        range: 'Sheet1!A:E', // Updated range to match new structure
+        range: 'CPR - Leads', // Exact sheet name from Google Sheets
         valueInputOption: 'USER_ENTERED',
         requestBody: {
           values,
@@ -96,10 +117,10 @@ export async function POST(request: Request) {
           'Unable to parse range',
         )
       ) {
-        // If the sheet name is wrong, try with a different sheet name
+        // If there's an error with the sheet name (maybe spaces causing issues), try with the first sheet
         await sheets.spreadsheets.values.append({
           spreadsheetId: SPREADSHEET_ID,
-          range: 'Leads!A:E', // Updated range to match new structure
+          range: 'A:G', // Use column range without sheet name
           valueInputOption: 'USER_ENTERED',
           requestBody: {
             values,
