@@ -7,28 +7,37 @@ import {
 } from '@headlessui/react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
 import { motion, AnimatePresence } from 'framer-motion'
-
 const faqs = [
   {
     question: 'Which areas in Northwest do you cover?',
     answer:
-      'We cover all areas in and around Northwest, including Salford, Altrincham, Didsbury, and Stockport. Not sure if we can reach you? Just give us a call!',
+      'We proudly serve all areas throughout Northwest, including Salford, Altrincham, Didsbury, Stockport, and surrounding communities. If you are unsure whether we service your location, please contact us directly and we will be happy to assist you!',
   },
   {
     question: "How do you handle Northwest's rainy weather during a clean?",
     answer:
-      "Rain doesn't stop us! We'll adjust our schedule as needed to ensure you get the best results.",
+      "Northwest's weather won't compromise our service quality! We carefully monitor forecasts and adapt our scheduling accordingly. If rain occurs during your appointment, we'll either work through light precipitation with specialized equipment or reschedule at your convenience to ensure optimal results.",
   },
   {
     question: 'Can I book multiple services at once?',
     answer:
-      'Absolutely! Many of our Northwest customers book a roof and driveway clean together. Ask us about bundle discounts!',
+      'Absolutely! We encourage comprehensive cleaning packages. Many of our customers combine services like roof cleaning, driveway washing, and gutter clearing for maximum efficiency. We offer attractive bundle discounts that provide better value while saving you time. Contact us for a customized quote!',
+  },
+  {
+    question: 'What cleaning methods do you use?',
+    answer:
+      'We utilize eco-friendly, high-efficiency cleaning solutions combined with state-of-the-art equipment. Our techniques are tailored to each surface type, ensuring thorough cleaning without causing damage. All our products are environmentally responsible and safe for your property.',
+  },
+  {
+    question: 'How often should I schedule cleaning services?',
+    answer:
+      'The recommended frequency depends on your specific environment and property conditions. Most Northwest homeowners benefit from exterior cleaning every 12-18 months. We are happy to assess your property and suggest an optimal maintenance schedule to keep your home looking its best year-round.',
   },
 ]
 
 export default function FAQ() {
   return (
-    <div className="bg-white">
+    <div className="bg-white" id="faq">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
           <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">

@@ -34,7 +34,7 @@ export const About = () => {
                     Northwest’s ever-changing climate.
                   </p>
 
-                  <div className="mt-10 flex items-center gap-x-6">
+                  {/* <div className="mt-10 flex items-center gap-x-6">
                     <a
                       href="/register"
                       className="text-sm font-semibold leading-6 text-blue-600"
@@ -42,7 +42,7 @@ export const About = () => {
                       Book a Service in Northwest Now{' '}
                       <span aria-hidden="true">→</span>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

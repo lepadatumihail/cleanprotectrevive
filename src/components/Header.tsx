@@ -10,7 +10,7 @@ import { InstagramLogo, FacebookLogo } from '@phosphor-icons/react'
 const navigation = [
   { name: 'About', href: '#about' },
   { name: 'Services', href: '#services' },
-  { name: 'Sponsors', href: '#sponsors' },
+  { name: 'FAQ', href: '#faq' },
   { name: 'Contact', href: '#contact' },
   // { name: 'Company', href: '#company' },
 ]
